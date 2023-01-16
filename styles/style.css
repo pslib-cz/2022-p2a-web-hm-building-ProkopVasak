@@ -1,3 +1,92 @@
-h1{
-    background-color: black;
+/*navbar*/
+.web__navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 ;
+    height: 75px;
+    line-height: 75px;
+    background-color: #ffffff
+}
+.web__navbar .navbar__logo{
+    
+}
+.web__navbar .navbar__list{
+    display: flex;
+    list-style: none;
+}
+.web__navbar .navbar__list .list__item{
+    cursor: pointer;
+    height: 100%;
+    padding: 0 7px;
+    transition: .4s;
+}
+    
+.web__navbar .navbar__list .item__link{
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    justify-content:center;
+    text-align:center;
+}
+
+@media (min-width: 768px) {
+    .web__navbar{
+        padding: 0 2rem;
+    }
+    .web__navbar .navbar__list .list__item{
+        padding: 0 20px;
+    } 
+}
+
+@media (max-width: 675px){
+    .web__navbar .navbar__list{
+        display: grid;
+        position: absolute;
+        width: 100%;
+        top:75px;
+        left: 0;    
+        transform: translateY(-100%);
+        z-index: -1;
+        transition: .6s;
+    }
+    .web__navbar .navbar__list .list__item{
+        padding-left: 35px; 
+    }
+    .web__navbar .navbar__toggler{
+        display: grid !important; 
+    }
+}
+.web__navbar .navbar__toggler{
+    display: none; 
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+}
+.web__navbar .navbar__toggler .bar{
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    transition: .4s;
+}
+body{background-color: aqua;}
+input{
+    display: none;
+}
+input:checked ~ .web__navbar .navbar__list{
+    transform: translateY(0);
+}
+input:checked ~ .web__navbar .navbar__toggler{
+    margin-top: 35px;
+
+}
+input:checked ~ .web__navbar .navbar__toggler .bar:nth-child(1){
+    position: absolute;
+    transform: rotate(45deg);
+}
+input:checked ~ .web__navbar .navbar__toggler .bar:nth-child(2){
+    display: none;
+}
+input:checked ~ .web__navbar .navbar__toggler .bar:nth-child(3){
+    transform: rotate(-45deg);
 }
