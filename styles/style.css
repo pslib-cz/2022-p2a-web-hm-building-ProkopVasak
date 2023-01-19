@@ -254,3 +254,56 @@ body{
     padding: 0;
     margin: 0;
 }
+.footer__btn{
+    color: #EB6C27;
+    background-color: #FFFFFF;
+    width: fit-content;
+    
+    margin:auto;
+    padding: 1em 2em;
+}
+a{
+    text-decoration: none;
+}
+.header__onas{
+    margin-left: 1em;
+}
+.text__info{
+    margin:0 1em;  
+}
+.seznam{
+    list-style: none;
+}
+.seznam .list::before {
+    content: "\2022";  
+    color: #EB6C27; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+  }
+ .restyl__body{
+    display: grid;
+    justify-content: center;
+ }
+.ref__img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.img1{
+    background-image: url(../images/reference/plochy-restyl/reference-restyl-01.jpeg);
+}
+.img2{
+    background-image: url(../images/reference/plochy-restyl/reference-restyl-02.jpeg);
+}
+.img3{
+    background-image: url(../images/reference/plochy-restyl/reference-restyl-03.jpeg);
+}
+.img4{
+    background-image: url(../images/reference/plochy-restyl/reference-restyl-04.jpeg);
+}
