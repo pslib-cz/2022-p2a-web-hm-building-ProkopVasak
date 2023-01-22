@@ -5,40 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/mobileHeader.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
 <body>
     <div class="web">
-        <input type="checkbox" id="toggle">
-        <nav class="web__navbar">
-            <a class="navbar__logo" href="./index.html"><img src="./images/logo.png"></a>
-            <label class="navbar__toggler" for="toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-            <ul class="navbar__list">
-                <li class="list__item">
-                    <a class="item__link">DOMŮ</a>
-                </li>
-                <li class="list__item">
-                    <a href="#sluzby" class="item__link">SLUŽBY</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">REFERENCE</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">O NÁS</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">KONTAKT</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="web__header">
-            <div class="header__text"><h1>HM Buildings.cz s.r.o.</h1></div>
-            <div class="header__desc"><p>liberecká stavební společnost</p></div>
-        </div>
+        <header>
+            <nav>
+                <a href="./index.html">
+                    <img class="logo" src="./images/logo.png">
+                </a>
+                <div class="menubtn">
+                    <div>
+                        <span>MENU</span>
+                        <picture>
+                            <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
+                        </picture>
+                        
+                    </div>
+                </div>
+                <menu>
+                    <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
+                    <li class="nav__item"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="nav__item"><a href="./sites/reference.html">REFERENCE</a></li>
+                    <li class="nav__item"><a href="./sites/onas.html">O NÁS</a></li>
+                    <li class="nav__item"><a href="./sites/kontakt.html">KONTAKT</a></li>
+                </menu>
+                <script>
+                    window.onclick = function(event) {
+                        if (!event.target.matches('.menubtn')) {
+                            document.querySelector("nav menu").classList.remove("active");
+                        } else {
+                            document.querySelector("nav menu").classList.toggle("active");
+                        }
+                    }
+                </script>
+            </nav>
+            
+            <div class="web__header">
+                <div class="header__text"><h1>HM Buildings.cz s.r.o.</h1></div>
+                <div class="header__desc"><p>liberecká stavební společnost</p></div>
+            </div>
+        </header>
         <div class="web__body">
             <div id="sluzby" class="body__header"><h2>Využijte škálu našich <span>služeb</span></h2></div>
             <div class="body__desc"><p>Ačkoliv provádíme především <b>průmyslové stavby</b>, není pro nás problém postavit Vám <b>rodinný domek na klíč</b>, nebo jen hrubou stavbu. Nejsou nám cizí ani <b>rekonstrukce budov</b> a jejich údržba a to včetně okolních ploch.</p></div>>
