@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mobileHeader.css">
+</head>
+<body>
+    
+        <div class="web">
+            <div class="header">
+                <nav>
+                    <a href="./index.html">
+                        <img class="logo" src="./images/logo.png">
+                    </a>
+                    <div class="menubtn">
+                        <div>
+                            <span>MENU</span>
+                            <picture>
+                                <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
+                            </picture>
+                            
+                        </div>
+                    </div>
+                    <menu>
+                        <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
+                        <li class="nav__item"><a href="./index.html#sluzby">SLUŽBY</a></li>
+                        <li class="nav__item"><a href="./reference.html">REFERENCE</a></li>
+                        <li class="nav__item"><a href="./onas.html">O NÁS</a></li>
+                        <li class="nav__item"><a href="./kontakt.html">KONTAKT</a></li>
+                    </menu>
+                    <script>
+                        window.onclick = function(event) {
+                            if (!event.target.matches('.menubtn')) {
+                                document.querySelector("nav menu").classList.remove("active");
+                            } else {
+                                document.querySelector("nav menu").classList.toggle("active");
+                            }
+                        }
+                    </script>
+                </nav>
+                <h1>Novostavby</h1>
+            </div>
+            <div class="web__body">
+                <p>Dle požadavků investora jsme schopní dodat kompletní stavbu na klíč, případně zhotovit ucelenou část. Jsme schopni zajistit také projektovou dokumentaci. Provádíme stavby jak průmyslového typu, tak rodinné stavby. Stavba je prováděna dle projektové dokumentace dodané investorem 
+                    a v rozsahu dle smlouvy o dílo, která obsahuje jasně definované ceny dle položkového rozpočtu.</p>
+                <ul>
+                    <li><p>zemní práce</p></li>
+                    <li><p>základové konstrukce</p></li>
+                    <li><p>zděné konstrukce</p></li>
+                    <li><p>montované konstrukce</p></li>
+                    <li><p>úpravy povrchů</p></li>
+                    <li><p>střešní konstrukce</p></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <h2>Plácneme si pro Váš projekt?</h2>
+                <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+                <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
+    
+            </div>
+        </div>
+</body>
+</html>

@@ -6,34 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mobileHeader.css">
 </head>
 <body>
-    <input type="checkbox" id="toggle">
-        <nav class="web__navbar">
-            <a class="navbar__logo" href="./index.html"><img src="./images/logo.png"></a>
-            <label class="navbar__toggler" for="toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-            <ul class="navbar__list">
-                <li class="list__item">
-                    <a class="item__link">DOMŮ</a>
-                </li>
-                <li class="list__item">
-                    <a href="#sluzby" class="item__link">SLUŽBY</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">REFERENCE</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">O NÁS</a>
-                </li>
-                <li class="list__item">
-                    <a class="item__link">KONTAKT</a>
-                </li>
-            </ul>
-        </nav>
+    <nav>
+        <a href="./index.html">
+            <img class="logo" src="./images/logo.png">
+        </a>
+        <div class="menubtn">
+            <div>
+                <span>MENU</span>
+                <picture>
+                    <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
+                </picture>
+                
+            </div>
+        </div>
+        <menu>
+            <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
+            <li class="nav__item"><a href="#sluzby">SLUŽBY</a></li>
+            <li class="nav__item"><a href="./sites/reference.html">REFERENCE</a></li>
+            <li class="nav__item"><a href="./sites/onas.html">O NÁS</a></li>
+            <li class="nav__item"><a href="./sites/kontakt.html">KONTAKT</a></li>
+        </menu>
+        <script>
+            window.onclick = function(event) {
+                if (!event.target.matches('.menubtn')) {
+                    document.querySelector("nav menu").classList.remove("active");
+                } else {
+                    document.querySelector("nav menu").classList.toggle("active");
+                }
+            }
+        </script>
+    </nav>
     <div class="header__onas"><h1>O nás</h1></div>
     <div class="text__info"><p>Společnost HM Building.cz s.r.o. nabízí své služby ve stavebnictví od roku 2015, a to převážně po Libereckém kraji.
      </p><p>V oboru pozemního stavitelství provádíme stavbu a rekonstrukci:</p></div>
@@ -55,7 +60,7 @@
      <div class="footer">
         <h2>Plácneme si pro Váš projekt?</h2>
         <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-        <a class="footer__btn">Nezávazně poptat</a>
+        <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
 
     </div>
 </body>
