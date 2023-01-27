@@ -9,82 +9,74 @@
     <link rel="stylesheet" href="./styles/mobileHeader.css">
 </head>
 <body>
+    <body class="page">
     
-        <div class="web">
-            <div class="header">
-                <nav>
-                    <a href="./index.html">
-                        <img class="logo" src="./images/logo.png">
-                    </a>
-                    <div class="menubtn">
-                        <div>
-                            <span>MENU</span>
-                            <picture>
-                                <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
-                            </picture>
-                            
-                        </div>
-                    </div>
-                    <menu>
-                        <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
-                        <li class="nav__item"><a href="./index.html#sluzby">SLUŽBY</a></li>
-                        <li class="nav__item"><a href="./reference.html">REFERENCE</a></li>
-                        <li class="nav__item"><a href="./onas.html">O NÁS</a></li>
-                        <li class="nav__item"><a href="./kontakt.html">KONTAKT</a></li>
-                    </menu>
-                    <script>
-                        window.onclick = function(event) {
-                            if (!event.target.matches('.menubtn')) {
-                                document.querySelector("nav menu").classList.remove("active");
-                            } else {
-                                document.querySelector("nav menu").classList.toggle("active");
-                            }
-                        }
-                    </script>
-                </nav>
-                <h1>Rekonstrukce domů</h1>
-            </div>
-            <div class="web__body">
-                <p>Provádíme veškeré práce spojené s rekonstrukcí stávajících objektů.</p>
-                <section>
-                    <h2>Dodatečné izolování objektů</h2>
-                    <ul>
-                        <li><p>zemní práce</p></li>
-                        <li><p>základové konstrukce</p></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Zateplení objektů</h2>
-                    <ul>
-                        <li><p>zateplení fasád</p></li>
-                        <li><p>výměna oken a otvorových výplní</p></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Změna vnitřních i vnějších dispozic stávajících objektů</h2>
-                    <ul>
-                        <li><p>bourací práce</p></li>
-                        <li><p>zednické práce</p></li>
-                        <li><p>sádrokartonářské práce</p></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Demolice stávajících objektů</h2>
-                    <ul>
-                        <li><p>bourací a demoliční práce</p></li>
-                        <li><p>odizolování konstrukcí pod/nad úrovní terénu</p></li>
-                        <li><p>zateplení objektů</p></li>
-                        <li><p>úprava vnitřních dispozic </p></li>
-                        <li><p>výměna otvorových výplní</p></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="footer">
-                <h2>Plácneme si pro Váš projekt?</h2>
-                <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-                <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
+
+
+        <header class="page__nav_backgroud">
+            <div class="page__nav_backgroud_overlay"></div>
+            <nav class="page__nav">
+                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
+                
+                <input class="page__menu_toggle" type="checkbox">
+                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
+                <menu class="page__nav_container"> 
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
+                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">sluzby    </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./references.html">reference </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás     </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./contacts.html">kontakt   </a> </li>
+                </menu>
+            </nav>        
+        </header>
     
-            </div>
-        </div>
+    
+        <main id="main" class="page__main_s">
+    
+            <section class="page__aboutus">
+                <h1 class="page__aboutus_header">Rekonstrukce domů</h1>
+                <p class="page__aboutus_text">
+                    Provádíme veškeré práce spojené s rekonstrukcí stávajících objektů.
+                </p>
+    
+                <h2 class="page__list_header">Dodatečné izolování objektů</h2>
+                <ul class="page__list">
+                    <li class="page__list_item">Zemní práce</li>
+                    <li class="page__list_item">základové konstrukce</li>    
+                </ul>
+    
+                <h2 class="page__list_header">Zateplení objektů</h2>
+                <ul class="page__list">
+                    <li class="page__list_item">zateplení fasád</li>
+                    <li class="page__list_item">výměna oken a otvorových výplní</li>
+                </ul>
+    
+                <h2 class="page__list_header">Změna vnitřních i vnějších dispozic stávajících objektů</h2>
+                <ul class="page__list">
+                    <li class="page__list_item">bourací práce</li>
+                    <li class="page__list_item">zednické práce</li>
+                    <li class="page__list_item">sádrokartonářské práce</li>
+                </ul>
+    
+                <h2 class="page__list_header">Demolice stávajících objektů</h2>
+                <ul class="page__list">
+                    <li class="page__list_item">bourací a demoliční práce</li>
+                    <li class="page__list_item">odizolování konstrukcí pod/nad úrovní terénu</li>
+                    <li class="page__list_item">zateplení objektů</li>
+                    <li class="page__list_item">úprava vnitřních dispozic </li>
+                    <li class="page__list_item">výměna otvorových výplní</li>
+                </ul>            
+            </section>
+    
+    
+        </main>
+        <footer class="page__footer">
+            <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
+            <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            <a class="page__cta page__cta--white page__cta--center" href="./contacts.html">Nezávazně poptat</a>
+    
+        </footer>
+    
+    </body>
 </body>
 </html>

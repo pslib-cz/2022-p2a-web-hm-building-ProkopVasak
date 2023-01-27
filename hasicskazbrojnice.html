@@ -9,67 +9,65 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <div class="web">
-        <div class="header">
-            <nav>
-                <a href="./index.html">
-                    <img class="logo" src="./images/logo.png">
-                </a>
-                <div class="menubtn">
-                    <div>
-                        <span>MENU</span>
-                        <picture>
-                            <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
-                        </picture>
-                        
-                    </div>
-                </div>
-                <menu>
-                    <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
-                    <li class="nav__item"><a href="#sluzby">SLUŽBY</a></li>
-                    <li class="nav__item"><a href="./sites/reference.html">REFERENCE</a></li>
-                    <li class="nav__item"><a href="./sites/onas.html">O NÁS</a></li>
-                    <li class="nav__item"><a href="./sites/kontakt.html">KONTAKT</a></li>
+    <body class="page">
+    
+        <header class="page__nav_backgroud">
+            <div class="page__nav_backgroud_overlay"></div>
+            <nav class="page__nav">
+                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
+                
+                <input class="page__menu_toggle" type="checkbox">
+                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
+                <menu class="page__nav_container"> 
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html#sluzby">sluzby    </a> </li>
+                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">reference </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás     </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./contacts.html">kontakt   </a> </li>
                 </menu>
-                <script>
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.menubtn')) {
-                            document.querySelector("nav menu").classList.remove("active");
-                        } else {
-                            document.querySelector("nav menu").classList.toggle("active");
-                        }
-                    }
-                </script>
-            </nav>
-            <h1>Hasičská zbrojnice</h1>
-            <p>Celková rekonstrukce hasičské zbrojnice v Rynolticích.</p>
-        </div>
-        <div class="gallery">
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-            <div class="gallery__img"></div>
-        </div>
-        <div class="footer">
-            <h2>Plácneme si pro Váš projekt?</h2>
-            <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-            <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
-
-        </div>
-    </div>
+            </nav>        
+        </header>
+    
+    
+        <main id="main" class="page__main_s">
+    
+            <section class="page__gallery">
+                <h1 class="page__gallery_header">Hasičská zbrojnice</h1>
+                <p class="page__gallery_text">Celková rekonstrukce hasičské zbrojnice v Rynolticích.</p>
+                <div class="page__gallery_container">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-01.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-02.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-03.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-04.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-05.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-06.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-07.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-08.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-09.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-10.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-11.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-12.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-14.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-15.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-16.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-17.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-18.jpeg">
+                    <img class="page__gallery_img" src="../img/reference/hasicska-zbrojnice/reference-hz-last.jpeg">
+    
+                
+                
+                </div>
+            </section>
+    
+    
+        </main>
+        <footer class="page__footer">
+            <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
+            <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            <a class="page__cta page__cta--white page__cta--center" href="./contacts.html">Nezávazně poptat</a>
+    
+        </footer>
+    
+    </body>
 </body>
 </html>

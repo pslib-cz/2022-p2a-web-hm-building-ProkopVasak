@@ -9,59 +9,76 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <div class="web">
-        <div class="header">
-            <nav>
-                <a href="./index.html">
-                    <img class="logo" src="./images/logo.png">
-                </a>
-                <div class="menubtn">
-                    <div>
-                        <span>MENU</span>
-                        <picture>
-                            <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
-                        </picture>
-                        
-                    </div>
-                </div>
-                <menu>
-                    <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
-                    <li class="nav__item"><a href="./index.html#sluzby">SLUŽBY</a></li>
-                    <li class="nav__item"><a href="./reference.html">REFERENCE</a></li>
-                    <li class="nav__item"><a href="./onas.html">O NÁS</a></li>
-                    <li class="nav__item"><a href="./kontakt.html">KONTAKT</a></li>
-                </menu>
-                <script>
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.menubtn')) {
-                            document.querySelector("nav menu").classList.remove("active");
-                        } else {
-                            document.querySelector("nav menu").classList.toggle("active");
-                        }
-                    }
-                </script>
-            </nav>
-            <h1>Reference</h1>
-            <p>Stojí za námi kvalitně vyhotovené zakázky dle konkrétních požadavků zadavatelů podepřené letitými zkušenostmi ve stavebnictví. To, že obrátit se na právě nás je vhodná volba potvrdí naši klienti, na jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se rozhodně nestydíme.</p>
-        </div>
-        <div class="we__body">
-            <div class="kontakty">
-                <div class="kontakt"></div>
-                <div class="kontakt"></div>
-                <div class="kontakt"></div>
-            </div>
-            <div class="mapa"></div>
-            <div class="dotaznik">
-                ####
-            </div>
-        </div>
-        
-        <div class="footer">
-            <h2>Plácneme si pro Váš projekt?</h2>
-            <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-            <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
+    <body class="page">
+    
 
-        </div>
-    </div>
+        <header class="page__nav_backgroud">
+            <div class="page__nav_backgroud_overlay"></div>
+            <nav class="page__nav">
+                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
+                
+                <input class="page__menu_toggle" type="checkbox">
+                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
+                <menu class="page__nav_container"> 
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html#sluzby">sluzby    </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./references.html">reference </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás</a> </li>
+                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">kontakt   </a> </li>
+                </menu>
+            </nav>        
+        </header>
+    
+    
+        <main id="main" class="page__main_s">
+    
+            <section class="page__contacts">
+                <h1 class="page__contacts_header">Kontaktujte nás</h1>
+                <p class="page__contacts_text">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
+                <div class="page__contacts_container">
+                    <div class="page__contacts_info">
+                        <p class="page__contacts_item">+420 775 550 564</p>
+                        <p class="page__contacts_item">stavby@hm-building.cz</p>
+                        <p class="page__contacts_item">Křižanská 12, Liberec XXII-Horní Suchá</p>
+                    </div>
+                    
+                    <a href="https://en.mapy.cz/zakladni?q=K%C5%99i%C5%BEansk%C3%A1%2012%2C%20Liberec%20XXII-Horn%C3%AD%20Such%C3%A1&amp;source=addr&amp;id=9085775&amp;ds=1&amp;x=15.0022034&amp;y=50.7607286&amp;z=17" class="page__contacts_overlay"><img class="page__contacts_map" src="../img/mapa.jpg" alt=""></a>
+                </div>
+            </section>
+    
+            <form class="page__form">
+                <h2>Nezávazná poptávka služeb</h2>
+                <p>Plácneme se pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+                <label class="page__form_label" for="name">Jméno a příjmení</label>
+                <input class="page__form_input" type="text" id="name" name="name">
+                <label class="page__form_label" for="email">E-mail</label>
+                <input class="page__form_input" type="email" id="email" name="email">
+                <label class="page__form_label" for="tel">Telefon</label>
+                <input class="page__form_input" type="tel" id="tel" name="tel">
+    
+                <label class="page__form_label" for="sluzba">Poptávaná služba</label>
+                <select class="page__form_select" name="sluzba">
+                    <option class="page__form_s_option" value="novostavba">Novostavba</option>
+                    <option class="page__form_s_option" value="prumstavba">Průmyslová stavba</option>
+                    <option class="page__form_s_option" value="rekonstrukce">Rekonstrukce domů a jiných staveb</option>
+                    <option class="page__form_s_option" value="kominukace">Komunikace a zpevněné plochy</option>
+    
+                </select>
+    
+                <label class="page__form_label" for="poznamka">Poznámka</label>
+                <textarea class="page__form_tarea" type="text" rows="15" id="poznamka" name="poznamka"></textarea>
+                <a class="page__cta page__cta--filled" href="#">Odeslat nezávaznou poptávku</a>
+    
+            </form>
+    
+        </main>
+        <footer class="page__footer">
+            <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
+            <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            <a class="page__cta page__cta--white page__cta--center" href="#">Nezávazně poptat</a>
+    
+        </footer>
+    
+    </body>
 </body>
 </html>

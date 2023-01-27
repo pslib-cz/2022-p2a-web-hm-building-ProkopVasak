@@ -9,69 +9,68 @@
     <link rel="stylesheet" href="./styles/mobileHeader.css">
 </head>
 <body>
+    <body class="page">
     
-        <div class="web">
-            <div class="header">
-                <nav>
-                    <a href="./index.html">
-                        <img class="logo" src="./images/logo.png">
-                    </a>
-                    <div class="menubtn">
-                        <div>
-                            <span>MENU</span>
-                            <picture>
-                                <source type="image/svg" srcSet="./images/menuBTN.svg" />                                                     
-                            </picture>
-                            
-                        </div>
-                    </div>
-                    <menu>
-                        <li class="nav__item nav__item--active"><a href="./index.html">DOMŮ</a></li>
-                        <li class="nav__item"><a href="./index.html#sluzby">SLUŽBY</a></li>
-                        <li class="nav__item"><a href="./reference.html">REFERENCE</a></li>
-                        <li class="nav__item"><a href="./onas.html">O NÁS</a></li>
-                        <li class="nav__item"><a href="./kontakt.html">KONTAKT</a></li>
-                    </menu>
-                    <script>
-                        window.onclick = function(event) {
-                            if (!event.target.matches('.menubtn')) {
-                                document.querySelector("nav menu").classList.remove("active");
-                            } else {
-                                document.querySelector("nav menu").classList.toggle("active");
-                            }
-                        }
-                    </script>
-                </nav>
-                <h1>Komunikace a zpevněné plochy</h1>
-            </div>
-            <div class="web__body">
-                <p>Komunikace a zpevněné plochy provádíme včetně zemních prací, konstrukcí podkladních a souvisejících objektů, jako jsou odvodnění, zpevnění svahů, opěrné zdi atd.</p>
-                <p><b>Kryt komunikace</b></p>
-                <ul>
-                    <li><p>živočišný</p></li>
-                    <li><p>betonový</p></li>
-                    <li><p>dlážděný (kámen, betonová dlažba...)</p></li>
+
+        <header class="page__nav_backgroud">
+            <div class="page__nav_backgroud_overlay"></div>
+            <nav class="page__nav">
+                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
+                
+                <input class="page__menu_toggle" type="checkbox">
+                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
+                <menu class="page__nav_container"> 
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
+                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">sluzby    </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./references.html">reference </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás     </a> </li>
+                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./contacts.html">kontakt   </a> </li>
+                </menu>
+            </nav>
+    
+        </header>
+    
+    
+        <main id="main" class="page__main_s">
+    
+            <section class="page__aboutus">
+                <h1 class="page__aboutus_header">Komunikace a zpevněné plochy</h1>
+                <p class="page__aboutus_text">
+                    Komunikace a zpevněné plochy provádíme <strong>včetně zemních prací, konstrukcí podkladních</strong> a souvisejících objektů, jako jsou <strong>odvodnění, zpevnění svahů, opěrné zdi</strong> atd.
+                </p>
+                <h2 class="page__list_header">Kryt komunikace</h2>
+    
+                <ul class="page__list">
+                    <li class="page__list_item">živočišný</li>
+                    <li class="page__list_item">betonový</li>
+                    <li class="page__list_item">dlážděný (kámen, betonová dlažba...)</li>
                 </ul>
-                <p>Při realizaci jakékoliv zpevněné plochy dokážeme navrhnout celkovou skladbu konstrukce, s ohledem na její způsob použití a umístění.</p>
-                <ul>
-                    <li><p>zemní práce</p></li>
-                    <li><p>podklady pod komunikace</p></li>
-                    <li><p>komunikace pro pěší i pojezdové</p></li>
-                    <li>
-                        <ul>
-                            <li><p>živičné</p></li>
-                            <li><p>betonové</p></li>
-                            <li><p>dlážděné</p></li>
+    
+                <p class="page__aboutus_text">
+                    Při realizaci jakékoliv zpevněné plochy <strong>dokážeme navrhnout celkovou skladbu konstrukce</strong>, s ohledem na její způsob použití a umístění.
+                </p>
+                <ul class="page__list">
+                    <li class="page__list_item">Zemní práce</li>
+                    <li class="page__list_item">podklady pod komunikace</li>
+                    <li class="page__list_item">komunikace pro pěší i pojezdové
+                        <ul class="page__list">
+                            <li class="page__list_item page__list_item--2">živičné</li>
+                            <li class="page__list_item page__list_item--2">betonové</li>
+                            <li class="page__list_item page__list_item--2">dlážděné</li>
                         </ul>
-                    </li>
+                </li>
                 </ul>
-            </div>
-            <div class="footer">
-                <h2>Plácneme si pro Váš projekt?</h2>
-                <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-                <a href="./kontakt.html" class="footer__btn">Nezávazně poptat</a>
+            </section>
     
-            </div>
-        </div>
+    
+        </main>
+        <footer class="page__footer">
+            <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
+            <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            <a class="page__cta page__cta--white page__cta--center" href="./contacts.html">Nezávazně poptat</a>
+    
+        </footer>
+    
+    </body>
 </body>
 </html>
