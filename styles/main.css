@@ -38,7 +38,7 @@
     height: 49px;
     position: relative;
     cursor: pointer;
-    appearance: none;
+    
     outline: none;
     border: none;
     background: none;
@@ -199,7 +199,7 @@
 
 .welcome-hero > * {
     background-attachment: fixed;
-    position: fixed;
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -292,6 +292,7 @@ a{
     text-align: center;
     padding-bottom: 2em;
     color: #ffffff;
+    height: 10em;
 }
 .page__footer_header{
     padding-top: 1em;
@@ -357,9 +358,69 @@ padding-top: .5em;
     width: 100%;
     
 }
-.page__gallery_container{
-    
+
+
+@media (min-width: 768px){
+    .welcome-hero{
+        height: 28em;
+    }
+    .page__reference_img{
+        height:17em;
+    }
+    .page__service_img{
+        height:15em;
+    }
+    .page__banner{
+        height:15em;
+        top:20px;
+    }
+    .page__banner_container{
+        padding-top: 4em;
+    }
 }
-.page__gallery_img{
-    width: 100%;
+@media (min-width: 1024px){
+    .welcome-hero{
+        height: 60em;
+    }
+   
+    .page__services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: dense;
+        
+    }
+    .left{
+
+        grid-column-start: 1;
+    }
+    .page__service-right{
+        grid-column: -2 / span 1;
+    }
+    .page__about_header{
+        grid-column:1 / span 2;
+    }
+    .page__about_text{
+        grid-column:1 / span 2;
+    }
+    
+    .page__reference_img{
+        height:17em;
+    }
+    .page__service_img{
+        height:15em;
+    }
+    .page__banner{
+        height:25em;
+        top:20px;
+    }
+    .page__banner_container{
+        padding-top: 4em;
+    }
+    .page__reference_container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .page__reference{
+        
+    }
 }
