@@ -5,45 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/mobileHeader.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
-    <body class="page">
+
+<body class="page">
     
-        <header class="page__hero">
-            <nav class="page__nav">
-                <a class="page__nav_img_cont" href="#"><img class="page__nav_img" src="./img/logo.png" alt=""></a>
-                
-                <input class="page__menu_toggle" type="checkbox">
-                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
-    
-                <menu class="page__nav_container">    
-                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">domů      </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="#sluzby">sluzby    </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="#reference">reference </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./onas.html">o nás     </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./kontakt.html">kontakt   </a> </li>
+        
+
+        <header>
+            <nav class="navbar">
+                <a class="navbar__logo"><img src="./img/logo.png" alt="logo"></a>
+                <menu class="navbar__menu">
+                    <li class="navbar__button navbar__button--activate"><a href="#" class="navbar__link" >DOMŮ</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#services">SLUŽBY</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#reference">REFERENCE</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="about.html">PROJEKTY</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
                 </menu>
-            </nav>  
-    
-            <div class="page__hero_overlay"></div>
-            <h1 class="page__hero_header">HM Building.cz s.r.o.</h1>
-            <p class="page__hero_text">liberecká stavební společnost</p>
-            <a class="page__cta page__cta--continue page__cta--filled" href="#sluzby">Pokračovat</a>
-        </header> 
+        
+                <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
+                    
+                    <span class="navbar__hamburger-title">MENU</span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <script>
+                        const hamburger = document.querySelector('.navbar__hamburger');
+                        const icons = document.querySelectorAll('.navbar__hamburger-icon');
+                        const menu = document.querySelector('.navbar__menu');
+
+                        icons.forEach (icon => {
+                            icon.addEventListener('click', (event) => {
+                                icon.classList.toggle("open");
+                            });
+                            hamburger.addEventListener('click', () => {
+                                menu.classList.toggle('open');
+                            })
+                        });
+                    </script>
+                </a>
+            </nav>
+            <div class="welcome-hero">
+                <div class="home-welcome-text">
+                    <h1 class="home-welcome-text__heading home-welcome-text__heading">HM Building.cz s.r.o.</h1>
+                    <h2 class="home-welcome-text__slogan">liberecká stavební společnost</h2>
+                </div>
+                
+            </div>
+        </header>
+
     
     
         <main id="main" class="page__main">
     
-            <article id="sluzby" class="page__services">
+            <article id="services" class="page__services">
                 <h2 class="page__about_header">Využijte škálu našich <span class="color">služeb</span></h2>
                 <p class="page__about_text">Ačkoliv provádíme především <strong>průmyslové stavby</strong>, není pro nás problém postavit Vám <strong>rodinný domek na klíč</strong>
                     , nebo jen hrubou stavbu. Nejsou nám cizí ani <strong>rekonstrukce budov</strong> a jejich 
                     údržba a to včetně okolních ploch.</p>
                 
                 <article class="page__service">
-                    <img class="page__service_img" src="./img/sluzba-novostavby-1200w.jpg" alt="">
+                    <img class="page__service_img right" src="./img/sluzba-novostavby-1200w.jpg" alt="">
                     <div class="page__service_container">
                         <h2 class="page__service_header">Novostavby</h2>
                         <p class="page__service_text">Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část. 
@@ -53,7 +76,7 @@
                     </div>
                 </article>
                 <article class="page__service">
-                    <img class="page__service_img" src="./img/sluzba-prumyslove-stavby-1920w.jpg" alt="">
+                    <img class="page__service_img left" src="./img/sluzba-prumyslove-stavby-1920w.jpg" alt="">
                     <div class="page__service_container">
                         <h2 class="page__service_header">Průmyslové stavby</h2>
                         <p class="page__service_text">Realizujeme <strong>průmyslové objekty ocelové konstrukce</strong>, lehké ocelové (stanového typu), z prefabrikovaných dílců atd. 
@@ -63,7 +86,7 @@
                     </div>
                 </article>
                 <article class="page__service">
-                    <img class="page__service_img" src="./img/sluzba-rekonstrukce-1920w.jpg" alt="">
+                    <img class="page__service_img right" src="./img/sluzba-rekonstrukce-1920w.jpg" alt="">
                     <div class="page__service_container">
                         <h2 class="page__service_header">Rekonstrukce domů a jiných staveb</h2>
                         <p class="page__service_text">Provádíme veškeré práce spojené s <strong>rekonstrukcí stávajících objektů</strong>. Pro naše klienty zajišťujeme 
@@ -73,7 +96,7 @@
                     </div>
                 </article>
                 <article class="page__service">
-                    <img class="page__service_img" src="./img/sluzba-komunikace-a-zpevnene-plochy-1200w.jpg" alt="">
+                    <img class="page__service_img left" src="./img/sluzba-komunikace-a-zpevnene-plochy-1200w.jpg" alt="">
                     <div class="page__service_container">
                         <h2 class="page__service_header">Komunikace a zpevněné plochy</h2>
                         <p class="page__service_text">Komunikace a zpevněné plochy provádíme včetně <strong>zemních prací, konstrukcí podkladních</strong> a souvisejících 
@@ -85,12 +108,12 @@
             </article>
     
             <div class="page__banner">
-                <div class="page__banner_overlay"></div>
+                
                 <div class="page__banner_container">
                     <p class="page__banner_text">Naše firma nabízí své služby 
                         ve stavebnictví od roku 2015.</p>
                     <p class="page__banner_text">Za kvalitu naší práce ručíme.</p>
-                    <a class="page__cta page__cta--filled" href="./reference.html">Přesvědčit se</a>                
+                    <a class="page__cta page__cta--filled" href="./kontakt.html">Přesvědčit se</a>                
                 </div>
     
             </div>
@@ -125,9 +148,10 @@
                     </a>                
                 </div>
     
-    
-                <a class="page__cta page__cta--filled page__cta--center" href="./reference.html">Více referencí</a>
-            </section>
+                <div class="btn">
+                    <a class="page__cta page__cta--filled page__cta--center" href="./reference.html">Více referencí</a>
+                </div>
+                </section>
         </main>
         <footer class="page__footer">
             <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
@@ -139,5 +163,5 @@
    
 
 </body>
-</body>
+
 </html>

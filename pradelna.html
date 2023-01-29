@@ -5,26 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/mobileHeader.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    
 </head>
 <body>
     <body class="page">
     
-        <header class="page__nav_backgroud">
-            <div class="page__nav_backgroud_overlay"></div>
-            <nav class="page__nav">
-                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
-                
-                <input class="page__menu_toggle" type="checkbox">
-                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
-                <menu class="page__nav_container"> 
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html#sluzby">sluzby    </a> </li>
-                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">reference </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás     </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./contacts.html">kontakt   </a> </li>
+        <header>
+            <nav class="navbar">
+                <a href="./index.html" class="navbar__logo"><img src="./img/logo.png" alt="logo"></a>
+                <menu class="navbar__menu">
+                    <li class="navbar__button navbar__button--activate"><a href="#" class="navbar__link" >DOMŮ</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#services">SLUŽBY</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#reference">REFERENCE</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="about.html">PROJEKTY</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
                 </menu>
+        
+                <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
+                    
+                    <span class="navbar__hamburger-title">MENU</span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <script>
+                        const hamburger = document.querySelector('.navbar__hamburger');
+                        const icons = document.querySelectorAll('.navbar__hamburger-icon');
+                        const menu = document.querySelector('.navbar__menu');
+
+                        icons.forEach (icon => {
+                            icon.addEventListener('click', (event) => {
+                                icon.classList.toggle("open");
+                            });
+                            hamburger.addEventListener('click', () => {
+                                menu.classList.toggle('open');
+                            })
+                        });
+                    </script>
+                </a>
             </nav>
         </header>
     
@@ -35,11 +53,11 @@
                 <h1 class="page__gallery_header">Samoobslužná prádelna</h1>
                 <p class="page__gallery_text">Stavební úpravy a opravy v rámci zřízerní samoobslužné prádelně v Liberci.</p>
                 <div class="page__gallery_container">
-                    <img class="page__gallery_img" src="../img/reference/pradelna/reference-pradelna-01.jpeg">
-                    <img class="page__gallery_img" src="../img/reference/pradelna/reference-pradelna-02.jpeg">
-                    <img class="page__gallery_img" src="../img/reference/pradelna/reference-pradelna-03.jpeg">
-                    <img class="page__gallery_img" src="../img/reference/pradelna/reference-pradelna-04.jpeg">
-                    <img class="page__gallery_img" src="../img/reference/pradelna/reference-pradelna-05.jpeg">
+                    <img class="page__gallery_img" src="./img/reference/pradelna/reference-pradelna-01.jpeg">
+                    <img class="page__gallery_img" src="./img/reference/pradelna/reference-pradelna-02.jpeg">
+                    <img class="page__gallery_img" src="./img/reference/pradelna/reference-pradelna-03.jpeg">
+                    <img class="page__gallery_img" src="./img/reference/pradelna/reference-pradelna-04.jpeg">
+                    <img class="page__gallery_img" src="./img/reference/pradelna/reference-pradelna-05.jpeg">
                
                 
                 </div>
