@@ -5,62 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/mobileHeader.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    
 </head>
-<body>
+
     <body class="page">
     
 
 
-        <header class="page__nav_backgroud">
-            <div class="page__nav_backgroud_overlay"></div>
-            <nav class="page__nav">
-                <a class="page__nav_img_cont" href="../index.html"><img class="page__nav_img" src="../img/logo.png" alt=""></a>
-                
-                <input class="page__menu_toggle" type="checkbox">
-                <div class="page__menu"><p class="page__menu_text">MENU</p></div>
-                <menu class="page__nav_container"> 
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="../index.html">domů      </a> </li>
-                    <li class="page__nav_item page__nav_item--active"><a class="page__nav_link uppercase" href="#">sluzby    </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./references.html">reference </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./about.html">o nás     </a> </li>
-                    <li class="page__nav_item"><a class="page__nav_link uppercase" href="./contacts.html">kontakt   </a> </li>
+        <header>
+            <nav class="navbar">
+                <a href="./index.html" class="navbar__logo"><img src="./img/logo.png" alt="logo"></a>
+                <menu class="navbar__menu">
+                    <li class="navbar__button navbar__button--activate"><a href="#" class="navbar__link" >DOMŮ</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#services">SLUŽBY</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="#reference">REFERENCE</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="./onas.html">O NÁS</a></li>
+                    <li class="navbar__button"><a class="navbar__link" href="./kontakt.html">KONTAKT</a></li>
                 </menu>
-            </nav>        
+        
+                <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
+                    
+                    <span class="navbar__hamburger-title">MENU</span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <span class="navbar__hamburger-floor"></span>
+                    <script>
+                        const hamburger = document.querySelector('.navbar__hamburger');
+                        const icons = document.querySelectorAll('.navbar__hamburger-icon');
+                        const menu = document.querySelector('.navbar__menu');
+
+                        icons.forEach (icon => {
+                            icon.addEventListener('click', (event) => {
+                                icon.classList.toggle("open");
+                            });
+                            hamburger.addEventListener('click', () => {
+                                menu.classList.toggle('open');
+                            })
+                        });
+                    </script>
+                </a>
+            </nav>
         </header>
     
     
-        <main id="main" class="page__main_s">
+        <body class="page">
     
-            <section class="page__aboutus">
-                <h1 class="page__aboutus_header">Novostavby</h1>
-                <p class="page__aboutus_text">
-                    Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část. 
-                    Jsme schopni zajistit také <strong>projektovou dokumentaci</strong>. Provádíme <strong>stavby jak průmyslového typu</strong> , tak 
-                    <strong>rodinné stavby</strong>. Stavba je prováděna dle projektové dokumentace dodané investorem 
-                    a v rozsahu dle smlouvy o dílo, která obsahuje jasně definované ceny dle položkového rozpočtu.
-                </p>
-    
-                <ul class="page__list">
-                    <li class="page__list_item">Zemní práce</li>
-                    <li class="page__list_item">základové konstrukce</li>
-                    <li class="page__list_item">zděné konstrukce</li>
-                    <li class="page__list_item">montované konstrukce</li>
-                    <li class="page__list_item">úpravy povrchů</li>
-                    <li class="page__list_item">střešní konstrukce</li>
-                </ul>
-            </section>
-    
-    
-        </main>
-        <footer class="page__footer">
-            <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
-            <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-            <a class="page__cta page__cta--white page__cta--center" href="./kontakt.html">Nezávazně poptat</a>
-    
-        </footer>
-    
-    </body>
+
+
+            
+        
+        
+            <main id="main" class="page__main_s">
+        
+                <section class="page__aboutus">
+                    <h1 class="page__aboutus_header">O nás</h1>
+                    <p class="page__aboutus_text">Společnost <strong>HM Building.cz s.r.o.</strong> nabízí své <strong>služby ve stavebnictví od roku 2015</strong>, a to převážně <strong>po Libereckém kraji</strong>.</p>
+                    <p class="page__aboutus_text">V oboru pozemního stavitelství <strong>provádíme stavbu a rekonstrukci</strong>:</p>
+        
+                    <ul class="page__list">
+                        <li class="page__list_item">průmyslových staveb</li>
+                        <li class="page__list_item">obytných staveb</li>
+                        <li class="page__list_item">staveb občanské vybavenosti</li>
+                        <li class="page__list_item">komunikací vozidlových, ale i pěších</li>
+                    </ul>
+        
+                    <p class="page__aboutus_text">Zakázky můžeme řešit tzv. <strong>na klíč</strong>, kde jsme schopni zajistit dodávky a montáž elektroinstalace NN a VN, zdravotně – 
+                        technické instalace, ústředního vytápění, vzduchotechniky, MaR, případně jsme schopni, po dohodě s investorem, 
+                        dodat pouze některou ucelenou část celkové zakázky.</p>
+                    <p class="page__aboutus_text">Naše firma taktéž zajišťuje <strong>projekční služby a služby týkající se statického posouzení staveb</strong> v oboru pozemního 
+                        stavitelství a dále jsme schopni zajistit <strong>investorsko–inženýrské služby</strong>.</p>
+                    <p class="page__aboutus_text"><strong>Záruční doba</strong> na námi provedená díla se pohybuje od 24 do 60 měsíců.</p>            
+                </section>
+        
+        
+            </main>
+            <footer class="page__footer">
+                <h2 class="page__footer_header">Plácneme si pro Váš projekt?</h2>
+                <p class="page__footer_text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+                <a class="page__cta page__cta--white page__cta--center" href="./contacts.html">Nezávazně poptat</a>
+        
+            </footer>
+        
+        </body>
 </body>
 </html>
