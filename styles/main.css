@@ -309,11 +309,7 @@ a{
 .page__main{
     padding: 0 .5em;
 }
-.btn{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
+
 .page__main_s{
     padding: 0 1em;
 }
@@ -382,17 +378,75 @@ padding-top: .5em;
     .welcome-hero{
         height: 60em;
     }
+      .navbar__hamburger {
+        display: none;
+    }
+
+    .navbar__logo {
+        margin-left: 1em;
+        height: calc(100% - 2em);
+    }
+
+    .navbar__menu, .navbar__menu.open {
+        opacity: 1;
+        position: static;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        left: unset;
+        width: fit-content;
+        height: 100%;
+        top: unset;
+        transition: 0s;
+        background-color: white;
+    }
+
+    .navbar__button {
+        display: flex;
+    }
+
+    .navbar__link {
+        text-decoration: none;
+        font-size: 1.2em;
+        position: relative;
+        color: var(--text-grey);
+        padding: 0 1em 0 1em;
+    }
+
+    .navbar__menu.open {
+        display: flex;
+    }
+
+    .navbar__button--activate, .navbar__button:hover {
+        background-color: var(--primary);
+    }
+
+    .navbar__menu::before {
+        display: none;
+    }
+
+    .navbar__button--activate > .navbar__link, .navbar__button:hover > .navbar__link {
+        color: white;
+    }
    
     .page__services{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
         grid-auto-flow: dense;
-        
+        justify-content: center;
+        align-content: center;
     }
+    
     .left{
 
         grid-column-start: 1;
     }
+    .right{
+
+        grid-column-start: -2;
+    }
+
     .page__service-right{
         grid-column: -2 / span 1;
     }
@@ -419,8 +473,13 @@ padding-top: .5em;
     .page__reference_container{
         display: grid;
         grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        grid-column: 1 / span 2;
+        width: 70%;
+        margin:0 auto;
     }
-    .page__reference{
-        
+    .page__reference_img{
+        height:20em;
     }
 }
