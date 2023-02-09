@@ -7,7 +7,17 @@
     --grad: linear-gradient(90deg, #EB6C27 0%, #FFBE9A 100%);
 
 }
+@font-face {
+  font-family: "OpenSans";
+  src: url(../font/OpenSans_SemiCondensed-Regular.ttf);
+}
 /* navbar */
+*{
+    font-family: OpenSans;
+}
+.home-welcome-text__heading{
+    letter-spacing: 50px;
+}
 
 .navbar {
     position: relative;
@@ -373,6 +383,9 @@ padding-top: .5em;
     .page__banner_container{
         padding-top: 4em;
     }
+    .page__banner_text{
+        font-size:1.2em;
+    }
 }
 @media (min-width: 1024px){
     .welcome-hero{
@@ -482,6 +495,43 @@ padding-top: .5em;
     .page__reference_img{
         height:20em;
     }
+    .page__about_header{
+        padding-left: 34%;
+    }
+    .page__about_text{
+        padding:0 10em;
+        font-size: 1.1em;
+    } 
+    .page__footer_header{
+        font-size: 1.5em;
+    }
+    .page__footer_text{
+        font-size: 1.5em;
+    }
+    .page__cta--white{
+        font-size: 1em;
+    }
+    .page__footer{
+        height: fit-content;
+    }
+    .page__reference_header{
+        font-size: 1.5em;
+    }
+    .page__reference_text{
+        font-size: 1.5em;
+    }
+    .page__banner_text{
+        font-size: 1.5em;
+    }
+    .page__cta--filled{
+        font-size: 1.5em;
+    }
+    .page__form_label{
+        font-size: 1.2em;
+    }
+    .page__form_s_option{
+        font-size: 1.2em;
+    }
 }
 @media (min-width: 1440px) { 
     .navbar{
@@ -525,24 +575,68 @@ padding-top: .5em;
     .page__reference:hover {
         opacity: 0.5;
         background-color: var(--hover-primary);
-      }
-      .page__main_s{
+    }
+    .page__main_s{
         margin-top:10em;
-      }
-      .page__contacts{
+    }
+    .page__contacts{
         display: grid;
         grid-template-columns: 1fr 1fr;
-      }
-      .page__contacts_header{
+    }
+    .page__contacts_header{
         grid-column: 1 / -1;
-      }
-      .page__contacts_text{
+    }
+    .page__contacts_text{
         grid-column: 1 / -1;
-      }
-      .page__contacts_overlay{
+    }
+    .page__contacts_overlay{
         grid-column-start: -2;
-      }
-      .page__form{
+    }
+    .page__form{
         width: 35%;
-      }
+    }
+    .page__about_text{
+        padding:0 20em;
+        font-size: 1.1em;
+    }
+    .page__about_header{
+        width: fit-content;
+        font-size: 2em;
+    }
+    .page__banner_text{
+        font-size:3em;
+    }
+    .page__cta--filled{
+        font-size: 1.5em;
+    }
+    .page__service_header{
+        margin-top:1em;
+    }
+    .page__footer_header{
+        font-size: 2em;
+    }
+    .page__footer_text{
+        font-size: 2em;
+    }
+    .page__cta--white{
+        font-size: 1.5em;
+    }
+    .page__footer{
+        height: fit-content;
+    }
+    .page__gallery_container{
+        padding: 0 5em;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-gap: 1em;
+    }
+    .page__gallery_img{
+        height: 20em;
+    }
+    .page__gallery_header{
+        padding-left: 2em;
+    }
+    .page__gallery_text{
+        padding-left: 3em;
+    }
 }
