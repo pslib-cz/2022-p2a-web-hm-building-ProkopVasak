@@ -11,6 +11,10 @@
   font-family: "OpenSans";
   src: url(../font/OpenSans_SemiCondensed-Regular.ttf);
 }
+
+.page__main_s{
+    min-height:35em;
+}
 /* navbar */
 *{
     font-family: OpenSans;
